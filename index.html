@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>11-dars</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center my-3">Users API</h2>
+        <hr>
+
+        <div class="row">
+            <div class="col">
+                <h3>Users :</h3>
+                <p>Count of users: <span class="users__count"></span>
+                </p>
+
+                <ul class="users__list list-unstyled">
+
+                </ul>
+            </div>
+            <div class="col border-end border-start">
+                <h3>Posts :</h3>
+                <p>
+                    Count of posts: <span class="posts__count"></span> <br>
+                    User Id: <span class="user_id">undefind</span>
+                </p>
+
+                <ul class="posts__list list-unstyled">
+
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Comments :</h3>
+                <p>
+                    Count of Comments<span class="comments__count"></span> <br>
+                    User Id: <span class="post_id">undefind</span>
+                </p>
+
+                <ul class="comments__list list-unstyled">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- onload="this.parentNode.style.backgroundColor='grey';"
+    onclick="this.parentElement.style.display = 'none'; -->
+    <template id="user-template">
+        <li class="border border-2 rounded border-danger mb-1 p-2">
+            <p class="user__username pointer m-0 my-1 h5 text-decoration-underline text-info">Umid Sattorov</p>
+            <p class="m-0 pointer">Email: <span class="user__email">a@gmail.com</span></p>
+            <p class="m-0">Country: <span class="user__country">UZB</span></p>
+            <p class="m-0">Company: <span class="user__company">a@gmail.com</span></p>
+            <p class="m-0 pointer">Website: <span class="user__website">a@gmail.com</span></p>
+        </li>
+    </template>
+
+    <template id="post-template">
+        <li class="border border-2 rounded border-warning mb-1 p-2">
+            <p class="post-title m-0 h5 mb-2 pointer text-danger">Umid Sattorov</p>
+            <p class="m-0">Post: <span class="post-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora debitis quisquam, distinctio eos itaque facilis quis, assumenda dignissimos est, et necessitatibus tenetur eius corrupti. Eaque.</span></p>
+        </li>
+    </template>
+
+    <template id="commment-template">
+        <li class="border border-2 rounded border-primary mb-1 p-2">
+            <p class="m-0 text-primary">Title: <span class="comments__title text-secondary">lorem</span></p>
+            <p class="m-0 pointer text-success text-decoration-underline">Email: <span class="comments__email">lorem</span></p>
+            <p class="m-0">Comment: <span class="comments__text">lorem</span></p>
+        </li>
+    </template>
+
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
