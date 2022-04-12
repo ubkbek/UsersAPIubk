@@ -65,9 +65,8 @@ elUserList.addEventListener("click", (evt)=>{
             storage.setItem("postId", JSON.stringify(userId))
             storage.removeItem("commentId")
             renderPosts(data, elPostList)
-            // console.log(data);
-            // dataset.userId.parentNode.style.backgroundColor='grey'
-            // document.querySelector("userId").style.backgroundColor='grey';
+            // document.getElementsByClassName(".userId")parent.style.backgroundColor='grey';
+            document.querySelector(".user__username").parentElement.style.backgroundColor = "#ccc";
         })();
     }
 })
@@ -82,6 +81,7 @@ elPostList.addEventListener("click", (evt)=>{
             storage.setItem("commentId", JSON.stringify(postId))
             renderComments(data, elCommentList)
             // console.log(data);
+            document.querySelector(".post-title").parentElement.style.backgroundColor = "#ccc";
         })();
     }
 })
